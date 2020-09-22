@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  line-height: 1;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  padding: 10px;
+}
+
+.left {
+  background-color: #011452;
+  color: #ffffff;
+  width: 75%;
+}
+
+.right {
+  background-color: #e3e3e3;
+  width: 25%;
+}
+
+#eventInfo1{
+  position: relative;
+  left: 10%;
+  top: 7%;
+  height: 20%;
+}
+#calendarIcon{
+  height: 25px;
+  width: 25px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+#eventInfo2{
+  position: relative;
+  left: 10%;
+  top: 12%;
+  max-width: 80%;
+}
+
+#eventInfo1 span{
+  font-weight: bold;
+}
+
+#eventDescription{
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.upcomingEvent{
+  position: relative;
+  left: 5%;
+  width: 90%;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left-color: #011452;
+}
+.upcomingEvent span{
+    display: inline-block;
+}
+
+.upcoming-title{
+  color: #011452;
+  font-weight: bold;
+}
+
+.monthSeparator{
+  position: relative;
+  left: 5%;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  color: #011452;
+}
+
+#upcomingEvents{
+  min-height: 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
