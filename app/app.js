@@ -8,7 +8,7 @@ var myApp = angular.module('myApp', [
 ]);
     myApp.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $routeProvider.when('/UpcomingEvents', {
-            templateUrl: 'UpcomingEvents/UpcomingEvents.html',
+            templateUrl: 'views/UpcomingEvents/UpcomingEvents.html',
             controller: 'UpcomingEventsCtrl'
         });
 
@@ -16,6 +16,9 @@ var myApp = angular.module('myApp', [
             templateUrl: 'index.html',
             controller: 'indexController'
         });
+
+        $locationProvider.hashPrefix('!');
+        $routeProvider.otherwise({redirectTo: '/UpcomingEvents'});
     }]);
 
     myApp.controller('indexController', ['$scope', function($scope) {
