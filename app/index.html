@@ -19,33 +19,7 @@
     <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-controller="indexController">
-<div class="row full-height">
-    <div class="column left">
-        <div id="eventInfo1">
-            <img id="calendarIcon" src="resources/images/calendarIcon1.png" alt="Italian Trulli"><br>
-            Dato: <span>{{nextEvent.start.getDay()}}. {{months[nextEvent.start.getMonth()]}}</span><br>
-            Tid: <span>{{nextEvent.startTimeString}} - {{nextEvent.endTimeString}}</span><br>
-            Sted: <span>{{nextEvent.location}}</span><br>
-        </div>
-        <div id="eventInfo2">
-            <span>{{nextEvent.title}}</span><br>
-            <span><h1>{{nextEvent.title}}</h1></span><br>
-            <span id="eventDescription">{{nextEvent.description}}</span><br>
-        </div>
-    </div>
-    <div id="upcomingEvents" class="box column right">
-        <div ng-repeat="event in upcomingEvents">
-            <div class="monthSeparator" ng-if="event.start.getMonth() != upcomingEvents[$index - 1].start.getMonth()">
-                {{months[event.start.getMonth()].toUpperCase()}}:
-            </div>
-            <div class="upcomingEvent">
-                <span>{{event.dateString}}</span><br>
-                <span class="upcoming-title">{{event.title}}</span><br>
-                <span>{{event.location}}</span><br>
-            </div>
-        </div>
-    </div>
-</div>
+<div ng-view class="full-height"></div>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -53,7 +27,7 @@
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular-route/angular-route.js"></script>
 <script src="app.js"></script>
-<script src="view1/view1.js"></script>
+<script src="UpcomingEvents/UpcomingEvents.js"></script>
 <script src="core/version/version.js"></script>
 <script src="core/version/version-directive.js"></script>
 <script src="core/version/interpolate-filter.js"></script>
