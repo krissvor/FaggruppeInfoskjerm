@@ -1,4 +1,9 @@
-<div>
-
-
+<div id="overview" class="full-height">
+    <div class="center>"><h1>Alle faggrupper</h1></div>
+    <div class="groupLinksHolder">
+        <div class="groupLink pointer" ng-repeat="group in groups"
+        ng-click="goToGroup(group)">
+            {{group.name}}
+        </div>
+    </div>
 </div>

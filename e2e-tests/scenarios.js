@@ -5,20 +5,20 @@
 describe('my app', function() {
 
 
-  it('should automatically redirect to /UpcomingEvents when location hash/fragment is empty', function() {
+  it('should automatically redirect to /upcomingEvents when location hash/fragment is empty', function() {
     browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/UpcomingEvents");
+    expect(browser.getLocationAbsUrl()).toMatch("/upcomingEvents");
   });
 
 
-  describe('UpcomingEvents', function() {
+  describe('upcomingEvents', function() {
 
     beforeEach(function() {
-      browser.get('index.html#!/UpcomingEvents');
+      browser.get('index.html#!/upcomingEvents');
     });
 
 
-    it('should render UpcomingEvents when user navigates to /UpcomingEvents', function() {
+    it('should render upcomingEvents when user navigates to /upcomingEvents', function() {
       expect(element.all(by.css('[ng-view] p')).first().getText()).
         toMatch(/partial for view 1/);
     });

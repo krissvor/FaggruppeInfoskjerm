@@ -4,26 +4,24 @@
 var myApp = angular.module('myApp', [
     'ngRoute',
     'myApp.UpcomingEvents',
+    'myApp.Overview',
     'myApp.version'
 ]);
-    myApp.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-        $routeProvider.when('/UpcomingEvents', {
-            templateUrl: 'views/UpcomingEvents/UpcomingEvents.html',
-            controller: 'UpcomingEventsCtrl'
-        });
+myApp.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
 
-        $routeProvider.when('', {
-            templateUrl: 'index.html',
-            controller: 'indexController'
-        });
+    $routeProvider.when('', {
+        templateUrl: 'index.html',
+        controller: 'indexController'
+    });
 
-        $locationProvider.hashPrefix('!');
-        $routeProvider.otherwise({redirectTo: '/UpcomingEvents'});
-    }]);
+    $locationProvider.hashPrefix('!');
+    $routeProvider.otherwise({redirectTo: '/overview'});
+}]);
 
-    myApp.controller('indexController', ['$scope', function($scope) {
 
-    }]);
+myApp.controller('indexController', ['$scope', function ($scope) {
+
+}]);
 
 
 

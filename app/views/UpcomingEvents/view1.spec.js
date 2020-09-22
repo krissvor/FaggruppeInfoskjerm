@@ -1,10 +1,10 @@
 'use strict';
 
-describe('myApp.UpcomingEvents module', function() {
+describe('myApp.upcomingEvents module', function() {
 
   beforeEach(module('myApp.UpcomingEvents'));
 
-  describe('UpcomingEvents controller', function(){
+  describe('upcomingEvents controller', function(){
 
     it('should ....', inject(function($controller) {
       //spec body

@@ -11,6 +11,9 @@
             <h1>{{nextEvent.title}}</h1><br>
             <span id="eventDescription">{{nextEvent.description}}</span><br>
         </div>
+        <div id="workplaceLogo" class="pointer" ng-click="openWorkplace(nextEvent)">
+            <img src="../../resources/images/workplaceLogo.png">
+        </div>
     </div>
     <div id="upcomingEvents" class="box column right">
         <div ng-repeat="event in upcomingEvents">
