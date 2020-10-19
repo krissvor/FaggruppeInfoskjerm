@@ -15,7 +15,7 @@
             <img src="../../resources/images/workplaceLogo.png">
         </div>
     </div>
-    <div id="upcomingEvents" class="box column right">
+    <div id="upcomingEvents" class="column right">
         <div ng-repeat="event in upcomingEvents">
             <div class="monthSeparator" ng-if="event.start.getMonth() != upcomingEvents[$index - 1].start.getMonth()">
                 {{months[event.start.getMonth()].toUpperCase()}}:

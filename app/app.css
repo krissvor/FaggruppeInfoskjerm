@@ -16,9 +16,9 @@ h1 {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 
-/* Create two equal columns that sits next to each other */
 .column {
   padding: 10px;
 }
@@ -30,12 +30,14 @@ h1 {
 .left {
   background-color: #011452;
   color: #ffffff;
-  width: 75%;
+  flex: 1 1 70%;
 }
 
 .right {
   background-color: #e3e3e3;
   width: 25%;
+  flex: 1 1 25%;
+  min-width: 250px;
 }
 
 #eventInfo1{
@@ -75,7 +77,6 @@ h1 {
 
 
 #eventDescription{
-  max-width: 70%;
   word-wrap: break-word;
 }
 
